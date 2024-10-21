@@ -20,6 +20,27 @@ function displayArea(area, areaId, areaUnitId){
         areaUnit.style.display ='none';
     }
 }
+// triangle area 
+function triangleArea(){
+    const base = inputData('triangle-base');
+    const height = inputData('triangle-height');
+    const area = .5 * base * height;
+    displayArea(area, 'triangle-area', 'triangle-area-unit');
+}
+// rectangle area 
+function rectangleArea(){
+    const base = inputData('rectangle-base');
+    const height = inputData('rectangle-height');
+    const area = base * height;
+    displayArea(area, 'rectangle-area', 'rectangle-area-unit');
+}
+// parallelogram area 
+function parallelogramArea(){
+    const base = inputData('parallelogram-base');
+    const height = inputData('parallelogram-height');
+    const area = base * height;
+    displayArea(area, 'parallelogram-area', 'parallelogram-area-unit');
+}
 // rhombus area calculation 
 function rhombusArea(){
     const d1 = inputData("rhombus-d-1");
@@ -37,23 +58,11 @@ function pentagonArea(){
     displayArea(area, 'pentagon-area', 'pentagon-area-unit');
 }
 // ellipse area 
-function ellipseArea() {
-    const apotem =   inputData('ellipse-semi-major-axis');
-    const perimeter  = inputData('ellipse-semi-minor-axis');
-    const area = .5 * apotem * perimeter;
-    displayArea(area, 'ellipse-area', 'ellipse-area-unit');
-
-
-    // const majorAxis = inputData('ellipse-semi-major-axis');
-    // const minorAxis = inputData('ellipse-semi-minor-axis');
-
-    // // Log the values to check if they're correctly retrieved
-    // console.log("Major Axis:", majorAxis);
-    // console.log("Minor Axis:", minorAxis);
-
-    // const area = 3.1416 * majorAxis * minorAxis;
-    // console.log("Area:", area);  // Log the area for debugging
-    
-
-    // displayArea(area, 'ellipse-area', 'ellipse-area-unit');
+function ellipseArea(){
+    const minorAxis = inputData('ellipse-minor-axis');
+    const majorAxis = inputData('ellipse-major-axis');
+    const area = 3.1416 * minorAxis * majorAxis;
+    displayArea ( area, 'ellipse-area', 'ellipse-area-unit');
 }
+
+
